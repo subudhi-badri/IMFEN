@@ -1,0 +1,37 @@
+# Experiment name
+exp_name: mfen
+
+# Dataset paths
+train_dataset: ./data/uieb_data/
+test_dataset: ./data/uieb_data/
+
+# Training parameters
+crop_size: 256
+batch_size: 2
+num_workers: 8
+learning_rate: 2.0e-6
+epochs: 100
+
+# Model parameters
+model:
+  en_feature_num: 48
+  en_inter_num: 32
+  de_feature_num: 64
+  de_inter_num: 32
+
+# Loss parameters
+loss:
+  lam: 1.0
+  lam_p: 1.0
+  lam_lpips: 1.0
+  lam_lab: 0.000001
+  lam_lch: 0.01
+
+# Metrics parameters
+metrics:
+  crop_border: 4
+  only_test_y_channel: true
+  data_range: 1.0
+
+# Checkpoint
+resume: null 
